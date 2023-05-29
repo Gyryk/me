@@ -7,4 +7,4 @@
 
 > The entirety of this project is a bit spaghetti code-y, I made it with a bunch of breaks and lost track of what past me was planning 
 
-The projects page is ironically probably the only page without any major flaws
+The projects page is ironically probably the only page without any major flaws, which is sad but hopefully a statement that will be rectified soon
