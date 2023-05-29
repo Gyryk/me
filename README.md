@@ -1,7 +1,7 @@
 # Me
 ### This is my personal portfolio website, programmed in HTML-CSS and JS
 
-#### The website looks significantly better in dark mode, it was primarily made for dark mode, and I would appreciate if you keep it in dark mode
+#### I happen to believe websites look significantly better in dark mode, which is why this one was primarily made for dark mode, and I default everything to dark mode
 
 > The about page is not programmed to be very responsive, sorry about that.
 
