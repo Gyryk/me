@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <title>Gyryk's Website</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sideIcon"> 
+                <a href="index.html">
+                    <img src="img/my_icon3.png" alt="Home">
+                </a>
+                <a href="https://gyryk.github.io/projects"">
+                    <img id="projects" src="img/projects.png" alt="Projects">
+                </a>
+            </div>
+            
+            <div class="icons">
+                <div class="contactIcon">
+                    <a href="mailto:gyryknotgirik@gmail.com?Subject=Contacting from website">
+                        <img id="email" src="img/email.png" alt="E-Mail">
+                    </a>
+                    <a href="https://twitter.com/Gyryk" target="_blank">
+                        <img id="twitter" src="img/twitter.png" alt="Twitter">
+                    </a>
+                    <a href="https://www.github.com/Gyryk" target="_blank">
+                        <img id="github" src="img/github.png" alt="GitHub">
+                    </a>
+                    <a href="https://linkedin.com/in/gyryk" target="_blank">
+                        <img id="linkedin" src="img/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="hamburger">
+                <button id="sidebarArrow">
+                    <img id="arrowImg" src="img/arrow.png" alt="Menu">
+                </button>
+            </div>
+            <div class="nightmode"> 
+                <button id="darkmode" onclick="darkMode()">
+                    <img id="toggleButton" src="img/lightmode.png" alt="Light/Dark Mode">
+                </button>
+            </div> 
+           
+            <div class="mainInfo">
+                <div class="intro">
+                    <div class="name"> Hi, I'm <span class="girik" data-value="Girik">Girik</span>! </div>
+                    <div class="titles"> Games Designer. Web Developer. Software Engineer. </div>
+                    <div class="infoText">
+                        I am a young and passionate software enthusiast, currently pursuing a BS in Computer Science from <u>University of Glasgow, Class of 2026</u>.
+                        I have a considerable amount of experience working with languages like <b>Python</b> and <b>C#</b>, as well as using <b>Unity3D</b>.
+                        Not a 1 trick pony, I also have a respectable understanding of <b>HTML-CSS</b>, <b>JavaScript/TypeScript</b>, and <b>Java</b>; which allows me to be a more versatile programmer.
+                        <br> <br>
+                        Interested in hiring me, have a collaboration project, or maybe just want my perspective on something? Feel free to 
+                        <a class="links" href="mailto:gyryknotgirik@gmail.com"><i>email</i></a> or <a id="tweet" class="links" href="https://twitter.com/gyryk" target="_blank"><i>tweet</i></a> at me!
+                    </div>
+
+                    <div class="buttons">
+                        <a href="about.html">
+                            <button id="About" class="about">
+                                Learn more!
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="icon">
+                    <img id="skills" src="img/skills.png" alt="Icon">
+                </div>
+            </div>
+
+            <div class="typing" id="typingAnim">
+                <h2>
+                    <span class="java">if (website.isOpen) { System.out.println("Welcome to my website!"); }</span>
+                    <span class="python">print('Hello World')</span>
+                </h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
