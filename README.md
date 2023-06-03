@@ -10,4 +10,4 @@
 
 The projects page is ironically probably the only page without any major flaws, which is sad but hopefully a statement that will be rectified soon
 
-#### There isn't much else for me to say here that hasn't been said on the website, it's live at https://gyryk.github.io/me so go check it out NOW!
+#### There isn't much else for me to say here that hasn't already been said on the website in a much better way, it's live at https://gyryk.github.io/me so go check it out NOW!
