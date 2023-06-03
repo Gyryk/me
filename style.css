@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;500;700&family=Roboto+Slab:wght@200;300;400;500&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&family=Roboto+Slab:wght@200;300;400;500&family=Source+Code+Pro&display=swap');
 
 *
 {
@@ -6,31 +6,107 @@
     padding: 0;
 }
 
-.sidebar
+#trailer
 {
     background-color: #fffcdf;
-    width: 1vw;
-    height: 100vh;
-    font-family: 'Roboto Slab', serif;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-color: transparent;
+    border-radius: 1.5rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#trailer-icon
+{
+    width: 0.75rem;
+    transform: translate(50%, 30%);
+
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+#trailer:not([data-type=""]) > #trailer-icon
+{
+    opacity: 1
+}
+
+
+body:hover > #trailer
+{
+    opacity: 1;
+}
+
+.interactable
+{
+    cursor: none;
+}
+
+.sidebar
+{
     z-index: 0;
+    background-color: #fffcdf;
+    width: 1vw;
+    height: 200vh;
 }
 
 .sideIcon img
 {
     width: 13vw;
-    padding: 32px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 0;
     justify-content: center;
-    padding-bottom: 36%;
+    margin-bottom: 36%;
     z-index: 1;
+}
+
+#projects
+{
+    top: 25rem;
+    position: fixed;
+}
+#home
+{
+    position: fixed;
+}
+
+#email
+{
+    bottom: 0.5vh;
+    left: 1.25vw;
+    position: fixed;
+}
+#twitter
+{
+    bottom: 0.5vh;
+    left: 4.75vw;
+    position: fixed;
+}
+#github
+{
+    bottom: 0.5vh;
+    left: 8.25vw;
+    position: fixed;
+}
+#linkedin
+{
+    bottom: 0.5vh;
+    left: 11.75vw;
+    position: fixed;
 }
 
 .contactIcon img
 {
     width: 3vw;
-    margin-top: 8%;
-    padding: 4px;
 }
-
 .contactIcon a
 {
     text-decoration: none;
@@ -39,24 +115,137 @@
 .icons
 {
     display: flex;
-    margin-left: 0.7%;
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
+    z-index: 10;
+}
+
+.hamburger
+{
+    position: fixed;
+    top: 2%;
+}
+.hamburger img
+{
+    width: 3rem;
+}
+.hamburger button
+{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.nightmode
+{
+    position: fixed;
+    right: 2%;
+    top: 4%;
+}
+.nightmode img
+{
+    width: 4rem;
+}
+.nightmode button
+{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.name
+{
+    height:105vh;
+    width: 80vw;
+    font-size: 6rem;
+    margin: auto;
+    text-align: center;
+    font-family: Gunterz;
+    font-weight: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container
+{
+    display: flex;
 }
 
 .main
 {
     width: 99vw;
     font-family: 'Roboto Mono', monospace;
-    background-color: #111111; /* try 0f0f0f or something */
+    background-color: #111111; /* try 0f0f0f or something if you don't like it*/
     color: #fffcdf;
     z-index: 2;
 }
 
-.container
+.titles
 {
-    display: flex;
+    opacity: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.infoText
+{
+    opacity: 0;
+    font-size: 1.25rem;
+    font-weight: 200;
+    translate: -5vw;
+}
+
+.links
+{
+    text-decoration: none;
+    color: #fffcdf;
+    font-weight: 300;
+}
+.linksLight
+{
+    color: black;
+    font-weight: 300;
+}
+
+.icon
+{   
+    opacity: 0;
+    translate: 5vw;
+}
+
+.buttons
+{
+    opacity: 0;
+    translate: 5vw;
+}
+
+.about
+{
+    padding: 1rem;
+    border-radius: 1.5rem;
+    border-color: transparent;
+    background-color:#fffcdf;
+    color: black;
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family: 'Roboto Slab', serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 48px;
+}
+.about:hover
+{
+    background-color: #111111;
+    border-color: transparent;
+    color: #fffcdf;
+}
+.aboutLight
+{
+    background-color: #111111;
+    color: #fffcdf;
+}
+.aboutLight:hover
+{
+    background-color: #fffcdf;
+    color: black;
 }
 
 .mainInfo
@@ -113,15 +302,14 @@
 
 .icon img
 {
-    height: 56vh;
+    width: 24vw;
 }
 
 .skillLevels
 {
     opacity: 0;
-    animation: fadeInAnimation 2s forwards ease-in-out;
+    animation: fadeInLeft 2s forwards ease-in-out;
 }
-
 .skillLevels img
 {
     height: 40vh;
@@ -133,103 +321,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.titles
-{
-    font-size: 2em;
-    font-weight: 500;
-}
-
-.name
-{
-    font-size: 3em;
-}
-
-.infoText
-{
-    font-size: 1.25em;
-    font-weight: 300;
-    margin-top: 16px;
-}
-
-.links
-{
-    text-decoration: none;
-    color: #fffcdf;
-}
-
-.linksLight
-{
-    color: black;
-}
-
-.about
-{
-    padding: 12px;
-    border-radius: 32px;
-    border-color: transparent;
-    background-color:#fffcdf;
-    color: black;
-    font-weight: 400;
-    font-size: 1.5em;
-    font-family: 'Roboto Slab', serif;
-    margin-left: 40%;
-    margin-top: 48px;
-}
-
-.about:hover
-{
-    background-color: #111111;
-    border-color: transparent;
-    color: #fffcdf;
-}
-
-.aboutLight
-{
-    background-color: #111111;
-    color: #fffcdf;
-}
-
-.aboutLight:hover
-{
-    background-color: #fffcdf;
-    color: black;
-}
-
-.hamburger
-{
-    position: absolute;
-    top: 2%;
-}
-
-.hamburger img
-{
-    width: 3vw;
-}
-
-.hamburger button
-{
-    background-color: transparent;
-    border-color: transparent;
-}
-
-.nightmode
-{
-    position: absolute;
-    right: 2%;
-    top: 4%;
-}
-
-.nightmode img
-{
-    width: 3vw;
-}
-
-.nightmode button
-{
-    background-color: transparent;
-    border-color: transparent;
 }
 
 .lightmode
@@ -244,31 +335,51 @@
     color: #fffcdf;
 }
 
+
+.leftFade
+{
+    animation: fadeInLeft 1s forwards;
+}
+.rightFade
+{
+    animation: fadeInRight 1s forwards;
+}
+.topFade
+{
+    animation: fadeInTop 1s forwards;
+}
+.leftFadeOut
+{
+    animation: fadeOutLeft 1s forwards;
+}
+.rightFadeOut
+{
+    animation: fadeOutRight 1s forwards;
+}
+.topFadeOut
+{
+    animation: fadeOutTop 1s forwards;
+}
 .rotate
 {
     animation: rotation 1s forwards;
 }
-
 .reset
 {
     animation: reverseRotation 1s forwards;
 }
-
 .mainShrink
 {
     animation: slideMain 1s forwards;
 }
-
 .sidebarGrow
 {
     animation: growSidebar 1s forwards;
 }
-
 .mainGrow
 {
     animation: mainSlide 1s forwards;
 }
-
 .sidebarShrink
 {
     animation: shrinkSidebar 1s forwards;
@@ -286,7 +397,6 @@
     position: relative;
     width: 100%;
 }
-
 .typing::after
 {
     content: "|";
@@ -298,12 +408,10 @@
     width: 92%;
     animation: coding 7s steps(69) alternate infinite, blinkingWhite 1s infinite;
 }
-
 .typingLight
 {
     color: green;
 }
-
 .typingLight::after
 {
     background-color: #fffcdf;
@@ -319,6 +427,19 @@
 .java
 {
     display: inline-block;
+}
+
+
+@font-face 
+{
+    font-family: Dethrone;
+    src: url('dethrone.ttf');
+}
+
+@font-face 
+{
+    font-family: Gunterz;
+    src: url('Gunterz.otf');
 }
 
 @media screen and (max-width: 875px)
@@ -367,7 +488,7 @@
     }
 }
 
-@keyframes fadeInAnimation
+@keyframes fadeInLeft
 {
     0% 
     {
@@ -377,7 +498,77 @@
     100% 
     {
         opacity: 1;
-        transform: translate3d(50px, 0, 0);
+        transform: translate3d(5vw, 0, 0);
+    }
+}
+
+@keyframes fadeInRight 
+{
+    0% 
+    {
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+    }
+    100% 
+    {
+        opacity: 1;
+        transform: translate3d(-5vw, 0, 0);
+    }
+}
+
+@keyframes fadeInTop 
+{
+    0% 
+    {
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+    }
+    100% 
+    {
+        opacity: 1;
+        transform: translate3d(0, -5vh, 0);
+    }
+}
+
+@keyframes fadeOutLeft
+{
+    0%
+    {
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+    100%
+    {
+        opacity: 0;
+        transform: translate3d(-5vw, 0, 0)
+    }
+}
+
+@keyframes fadeOutRight
+{
+    0%
+    {
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+    100%
+    {
+        opacity: 0;
+        transform: translate3d(5vw, 0, 0)
+    }
+}
+
+@keyframes fadeOutTop
+{
+    0%
+    {
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+    100%
+    {
+        opacity: 0;
+        transform: translate3d(0, 5vh, 0)
     }
 }
 
@@ -479,6 +670,7 @@
 
 @keyframes shrinkSidebar
 {
+    /*Use :root and var() so that you can do media queries */
     from
     {
         width: 16vw;

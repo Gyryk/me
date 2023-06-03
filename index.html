@@ -9,6 +9,8 @@
     <meta name="copyright" content="Gyryk">
     <meta name="author" content="Gyryk">
     <meta name="image" content="img/share_image.png">
+    <meta name="og:image" content="img/share_image.png">
+    <meta name="twitter:image" content="img/share_image.png">
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -18,74 +20,81 @@
 </head>
 
 <body>
+    <div id="trailer" class="trailer">
+        <img id="trailer-icon" class="arrow"></i>
+        <!--Could try duotone or something that makes it easier to not have to use multiple classes just for this trailer-->
+    </div>
     <div class="container">
         <div class="sidebar">
             <div class="sideIcon"> 
-                <a href="index.html">
-                    <img src="img/my_icon3.png" alt="Home">
+                <a href="https://gyryk.github.io/me">
+                    <img id="home" src="img/my_icon3.png" alt="Home" class="interactable" data-type="link">
                 </a>
-                <a href="https://gyryk.github.io/projects"">
-                    <img id="projects" src="img/projects.png" alt="Projects">
+                <a href="https://gyryk.github.io/projects">
+                    <img id="projects" src="img/projects.png" alt="Projects" class="interactable" data-type="link">
                 </a>
             </div>
             
             <div class="icons">
                 <div class="contactIcon">
                     <a href="mailto:gyryknotgirik@gmail.com?Subject=Contacting from website">
-                        <img id="email" src="img/email.png" alt="E-Mail">
+                        <img id="email" src="img/email.png" alt="E-Mail" class="interactable" data-type="link">
                     </a>
                     <a href="https://twitter.com/Gyryk" target="_blank">
-                        <img id="twitter" src="img/twitter.png" alt="Twitter">
+                        <img id="twitter" src="img/twitter.png" alt="Twitter" class="interactable" data-type="link">
                     </a>
                     <a href="https://www.github.com/Gyryk" target="_blank">
-                        <img id="github" src="img/github.png" alt="GitHub">
+                        <img id="github" src="img/github.png" alt="GitHub" class="interactable" data-type="link">
                     </a>
                     <a href="https://linkedin.com/in/gyryk" target="_blank">
-                        <img id="linkedin" src="img/linkedin.png" alt="LinkedIn">
+                        <img id="linkedin" src="img/linkedin.png" alt="LinkedIn" class="interactable" data-type="link">
                     </a>
                 </div>
             </div>
         </div>
 
         <div class="main">
-            <div class="hamburger">
+            <div class="hamburger interactable" data-type="info">
                 <button id="sidebarArrow">
                     <img id="arrowImg" src="img/arrow.png" alt="Menu">
                 </button>
             </div>
-            <div class="nightmode"> 
+            <div class="nightmode interactable" data-type="arrow"> 
                 <button id="darkmode" onclick="darkMode()">
                     <img id="toggleButton" src="img/lightmode.png" alt="Light/Dark Mode">
                 </button>
             </div> 
            
+            <div class="name" data-og="Hi, I'm Girik!"> Hi, I'm Girik! </div>
+
             <div class="mainInfo">
                 <div class="intro">
-                    <div class="name"> Hi, I'm <span class="girik" data-value="Girik">Girik</span>! </div>
-                    <div class="titles"> Games Designer. Web Developer. Software Engineer. </div>
-                    <div class="infoText">
+                    <div class="titles"> 
+                        <span class="gamedev interactable" data-type="info" data-value="Games Designer">Games Designer</span>.
+                        <span class="webdev interactable" data-type="info" data-value="Web Developer">Web Developer</span>.
+                        <span class="swe interactable" data-type="info" data-value="Software Engineer">Software Engineer</span>.
+                    </div>
+                    <div class="infoText"> <!--I'm a staunch believer of the fact that you make your own luck, which means "when you're with me, you're never taking a gamble" in recolor-->
                         I am a young and passionate software enthusiast, currently pursuing a BS in Computer Science from <u>University of Glasgow, Class of 2026</u>.
                         I have a considerable amount of experience working with languages like <b>Python</b> and <b>C#</b>, as well as using <b>Unity3D</b>.
                         Not a 1 trick pony, I also have a respectable understanding of <b>HTML-CSS</b>, <b>JavaScript/TypeScript</b>, and <b>Java</b>; which allows me to be a more versatile programmer.
                         <br> <br>
                         Interested in hiring me, have a collaboration project, or maybe just want my perspective on something? Feel free to 
-                        <a class="links" href="mailto:gyryknotgirik@gmail.com"><i>email</i></a> or <a id="tweet" class="links" href="https://twitter.com/gyryk" target="_blank"><i>tweet</i></a> at me!
+                        <a class="links interactable" data-type="link" href="mailto:gyryknotgirik@gmail.com"><i>email</i></a> or <a id="tweet" class="links interactable" data-type="link" href="https://twitter.com/gyryk" target="_blank"><i>tweet</i></a> at me!
                     </div>
 
                     <div class="buttons">
-                        <a href="about.html">
-                            <button id="About" class="about">
-                                Learn more!
-                            </button>
-                        </a>
+                        <button id="About" class="about interactable" data-type="link" onclick="aboutFunc()">
+                            But who is he?
+                        </button>
                     </div>
                 </div>
 
-                <div class="icon">
-                    <img id="skills" src="img/skills.png" alt="Icon">
+                <div class="icon"> <!--Object looking at cursor can be a roulette wheel, ball rotates like pupil would to always look at you-->
+                    <img id="skills" src="img/skills.png" alt="Icon"> <!--Have to make 2 of my own roulette wheel icons and ball icons-->
                 </div>
             </div>
-
+            <br>
             <div class="typing" id="typingAnim">
                 <h2>
                     <span class="java">if (website.isOpen) { System.out.println("Welcome to my website!"); }</span>
