@@ -1,5 +1,5 @@
 # Me
-### This is my personal portfolio website, programmed in HTML-CSS and JS
+### This is my personal website, programmed in HTML-CSS and JS
 
 #### I happen to believe websites look significantly better in dark mode, which is why this one was primarily made for dark mode, and I default everything to dark mode.
 - The lack of any usable mobile version of the website is largely apparent and will be fixed promptly
